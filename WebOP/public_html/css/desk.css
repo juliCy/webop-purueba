@@ -1,0 +1,320 @@
+body{
+    background: -moz-linear-gradient(-45deg, rgba(255,222,163,0.61) 0%, rgba(255,216,140,0.65) 48%, rgba(255,219,135,0.66) 56%, rgba(255,208,89,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(255,222,163,0.61) 0%,rgba(255,216,140,0.65) 48%,rgba(255,219,135,0.66) 56%,rgba(255,208,89,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(255,222,163,0.61) 0%,rgba(255,216,140,0.65) 48%,rgba(255,219,135,0.66) 56%,rgba(255,208,89,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9cffdea3', endColorstr='#b3ffd059',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: url('../img/Wiki-background2.png');
+}
+#container{
+    padding-top: 10px;
+    font-family: Arial;
+}
+#container > header {
+    text-align: center;   
+}
+#logoH img {
+    height: 30%;
+    width: 30%;
+}
+nav {
+    text-align: center;
+    margin: 30px 100px;
+}
+nav > ul{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 0;
+    position: relative;
+}
+nav > ul > li {
+    display: inline;
+    padding: 0 9.5px;
+}
+nav > ul > li > a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+nav > ul > li > a:hover{
+    color: #F6832E;
+}
+nav > ul > li > div{
+    display: none;
+    position: absolute;
+    left: 0px;
+    background-image: url('../img/fondo.jpg');
+    height: auto;
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+nav > ul > li > div > ul{
+    list-style-type: none;
+    float: left;
+    text-align: left;
+}
+nav > ul > li > div > ul > li{
+    list-style-type: none;
+    padding: 10px 0;
+}
+nav > ul > li > div > ul > li > a{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+nav > ul > li > div > ul > li > a:hover{
+    color: #F6832E;
+}
+nav > ul > li:hover > div{
+    display: block;
+}
+
+/*----------------------------------------------*/
+
+main{
+    padding: 0 100px;
+}
+#registrar{
+    background: #feffff; /* Old browsers */
+    background: -moz-linear-gradient(left, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 */
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+    float: left;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#registrar > #marco{
+    padding: 0 20px;
+}
+#registrar > div a:link, a:visited{
+    background-color: #F6832E;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 20px;
+    padding: 0 22px;
+    margin-bottom: 20px;
+    text-decoration: none; 
+}
+#registrar > div a:hover, a:active{
+    background-color: #E16306; 
+}
+#registrar a{
+    color: white;
+}
+#accesos{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 35%;
+    float: right;
+    background: #feffff; /* Old browsers */
+    background: -moz-linear-gradient(left, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 */
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#accesoslog{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 35%;
+    float: right;
+    background: #feffff; /* Old browsers */
+    background: -moz-linear-gradient(left, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 */
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-control{ 
+    width: auto !important;  
+    margin-top: 15px
+}
+#accesoslog > button{
+    margin-bottom: 15px;
+}
+#carrusel{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+    float: left;
+    background: #feffff; /* Old browsers */
+    background: -moz-linear-gradient(left, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 */
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#caps{   
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+    float: left;
+    background: #feffff; /* Old browsers */
+    background: -moz-linear-gradient(left, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 */
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#caps h4{
+    text-align: center;
+    background-color: #ffe4b3;
+    padding: 15px 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+#caps div{
+    padding: 0 20px;
+}
+#caps > div > div{
+    margin-bottom: 15px;
+    float: right;
+    position: relative;
+    height: 30%;
+    width: 30%;
+}
+#caps > div > div img{
+    height: 100%;
+    width: 100%;
+}
+#accesos > table{
+    width: 100%;
+    padding: 10px 20px;
+}
+#accesos > table  img{
+    border-radius: 3px;
+    height: 50px;
+    width: 50px;
+}
+#accesos h4{
+    background-color: #ffe4b3;
+    padding: 15px 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+td{
+    padding: 10px;
+}
+.charbox{
+    background: #ffe4b3;
+    border-radius: 5px;
+    height: 50px;
+    padding: 3px;
+    width: 50px;
+    position: relative;
+    margin: 0 auto;    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.charbox:hover{
+    box-shadow: 0 0 50px #ffe4b3;
+}
+
+/*----------------------------------------------*/
+
+footer{
+    padding:40px 0;
+    text-align: center;
+    border-top: 2px solid black;
+    width: 100%; 
+    float: left;
+}
+footer > ul {
+    list-style-type: none;
+    padding: 0
+}
+footer > ul > li {
+    display: inline-block;
+    margin: 10px
+}
+footer > ul > li > a {
+    color: black !important;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1100px){
+    #registrar{
+        width: 100%;
+        float: none;
+    }
+    #accesos{
+        width: 100%;
+        float: none;
+    }
+    #carrusel{
+        width: 100%;
+        float: none;
+    }
+    #caps{
+        width: 100%;
+        float: none;
+    }
+    #accesoslog{
+        display: none;
+    }
+    main{
+        padding: 0 30px;
+    }
+    nav{
+        margin: 10px 30px 40px;
+    }
+    #logoH img{
+        height: 50%;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1024px){
+    #registrar{
+        width: 100%;
+        float: none;
+    }
+    #accesos{
+        width: 100%;
+        float: none;
+    }
+    #carrusel{
+        width: 100%;
+        float: none;
+    }
+    #caps{
+        width: 100%;
+        float: none;
+    }
+    #caps > div > div{
+    margin: 15px auto;;
+    float: none;
+    text-align: center;
+    position: relative;
+    height: 40%;
+    width: 40%;
+}
+    #accesoslog{
+        display: none;
+    }
+    main{
+        padding: 0 30px;
+    }
+    nav{
+        margin: 10px 30px 40px;
+    }
+    #logoH img{
+        height: 50%;
+        width: 50%;
+    }
+}
