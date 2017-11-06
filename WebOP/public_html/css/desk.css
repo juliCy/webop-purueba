@@ -1,16 +1,17 @@
-body{
+body {
     background: -moz-linear-gradient(-45deg, rgba(255,222,163,0.61) 0%, rgba(255,216,140,0.65) 48%, rgba(255,219,135,0.66) 56%, rgba(255,208,89,0.7) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, rgba(255,222,163,0.61) 0%,rgba(255,216,140,0.65) 48%,rgba(255,219,135,0.66) 56%,rgba(255,208,89,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, rgba(255,222,163,0.61) 0%,rgba(255,216,140,0.65) 48%,rgba(255,219,135,0.66) 56%,rgba(255,208,89,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9cffdea3', endColorstr='#b3ffd059',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     background: url('../img/Wiki-background2.png');
 }
-#container{
+.container {
     padding-top: 10px;
     font-family: Arial;
+    width: 100%;
 }
-#container > header {
-    text-align: center;   
+.container > header {
+    text-align: center;
 }
 #logoH img {
     height: 30%;
@@ -20,7 +21,10 @@ nav {
     text-align: center;
     margin: 30px 100px;
 }
-nav > ul{
+nav > #navmov{
+    display: none;
+}
+nav > ul {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     padding-bottom: 16px;
@@ -37,10 +41,10 @@ nav > ul > li > a {
     color: black;
     text-decoration: none;
 }
-nav > ul > li > a:hover{
+nav > ul > li > a:hover {
     color: #F6832E;
 }
-nav > ul > li > div{
+nav > ul > li > div {
     display: none;
     position: absolute;
     left: 0px;
@@ -53,12 +57,11 @@ nav > ul > li > div{
     padding-top: 16px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-nav > ul > li > div > ul{
-    list-style-type: none;
+nav > ul > li > div > ul {
     float: left;
     text-align: left;
 }
-nav > ul > li > div > ul > li{
+nav > ul > li > div > ul > li {
     list-style-type: none;
     padding: 10px 0;
 }
@@ -113,7 +116,7 @@ main{
     margin-bottom: 20px;
     text-decoration: none; 
 }
-#registrar > div a:hover, a:active{
+#registrar > div a:hover{
     background-color: #E16306; 
 }
 #registrar a{
@@ -149,13 +152,13 @@ main{
 }
 .form-control{ 
     width: auto !important;  
-    margin-top: 15px
+    margin: 15px auto 0 auto;
 }
 #accesoslog > button{
     margin-bottom: 15px;
 }
 #carrusel{
-    text-align: center;
+    z-index: -1;
     border: 1px solid black;
     border-radius: 10px;
     width: 100%;
@@ -168,12 +171,13 @@ main{
     margin-bottom: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/*--------------------------------------------*/
 #carrusel img{
-    height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
-/*--------------------------------------------*/
+.carousel-control{
+    border-radius: 10px;
+}
 #caps{   
     border: 1px solid black;
     border-radius: 10px;
@@ -201,12 +205,19 @@ main{
     margin-bottom: 15px;
     float: right;
     position: relative;
-    height: 30%;
     width: 30%;
 }
 #caps > div > div img{
-    height: 100%;
     width: 100%;
+    border: 4px solid #ffe4b3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#caps > div > #anime{
+    margin: 15px auto;
+    float: none;
+    text-align: center;
+    position: relative;
+    width: 50%;
 }
 #accesos > table{
     width: 100%;
@@ -263,37 +274,6 @@ footer > ul > li > a {
     text-decoration: none;
 }
 
-/*@media screen and (max-width: 1100px){
-    #registrar{
-        width: 100%;
-        float: none;
-    }
-    #accesos{
-        width: 100%;
-        float: none;
-    }
-    #carrusel{
-        width: 100%;
-        float: none;
-    }
-    #caps{
-        width: 100%;
-        float: none;
-    }
-    #accesoslog{
-        display: none;
-    }
-    main{
-        padding: 0 30px;
-    }
-    nav{
-        margin: 10px 30px 40px;
-    }
-    #logoH img{
-        height: 50%;
-        width: 50%;
-    }
-}*/
 @media screen and (max-width: 1024px){
     #left{
         width: 100%;
@@ -304,18 +284,132 @@ footer > ul > li > a {
     #registrar{
         width: 100%;
         float: none;
+        margin-bottom: 30px;
     }
     #accesos{
         width: 100%;
         float: none;
+        margin-bottom: 30px;
     }
     #carrusel{
         width: 100%;
         float: none;
+        margin-bottom: 30px;
     }
     #caps{
         width: 100%;
         float: none;
+        margin-bottom: 30px;
+    }
+    #caps > div > div{
+        margin: 15px auto;
+        float: none;
+        text-align: center;
+        position: relative;
+        width: 25%;
+    }
+    #accesoslog{
+        display: none;
+    }
+    main{
+        padding: 0 20px;
+    }
+    nav{
+        margin: 10px 20px 40px;
+    }
+    nav > ul{
+        display: none;
+    }
+    nav > #navmov{
+        display: block;
+    }
+    nav > #navmov > li {
+        display: inline;
+        padding: 0 110px;
+    }
+    nav > #navmov > li > div > ul > li > div {
+        display: none;
+        position: absolute;
+        left: 0px;
+        background-image: url('../img/fondo.jpg');
+        height: auto;
+        width: 100%;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    nav > #navmov > li > div > ul > li > div > ul{
+        float: left;
+        text-align: left;       
+    }
+    nav > #navmov > li > div > ul > li > div > ul > li {
+        list-style-type: none;
+        padding: 10px 0;
+    }
+    nav > #navmov > li > div > ul > li > div > ul > li > a{
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+    }
+    nav > #navmov > li > div > ul > li > div > ul > li > a:hover{
+        color: #F6832E;
+    }
+    nav > #navmov > li > div > ul > li:hover > div{
+        display: block;
+    }
+    #logoH img{
+        height: 50%;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px){
+    #caps > div > div{
+        margin: 15px auto;
+        float: none;
+        text-align: center;
+        position: relative;
+        width: 30%;
+    }
+    main{
+        padding: 0 15px;
+    }
+    nav{
+        margin: 10px 15px 40px;
+    }
+}
+@media screen and (max-width: 414px){
+    #caps > div > div{
+        margin: 15px auto;
+        float: none;
+        text-align: center;
+        position: relative;
+        width: 35%;
+    }
+    main{
+        padding: 0 0;
+    }
+    nav{
+        margin: 10px 0 40px;
+    }
+    nav > #navmov > li {
+        padding: 0 55px;
+    }
+}
+@media screen and (max-width: 375px){
+    #caps > div > div{
+        margin: 15px auto;
+        float: none;
+        text-align: center;
+        position: relative;
+        width: 40%;
+    }
+}
+@media screen and (max-width: 320px){
+    #accesos > table{
+        width: 100%;
+        padding: 10px 5px;
     }
     #caps > div > div{
         margin: 15px auto;
@@ -324,17 +418,7 @@ footer > ul > li > a {
         position: relative;
         width: 50%;
     }
-    #accesoslog{
-        display: none;
-    }
-    main{
-        padding: 0 30px;
-    }
-    nav{
-        margin: 10px 30px 40px;
-    }
-    #logoH img{
-        height: 50%;
-        width: 50%;
+    nav > #navmov > li {
+        padding: 0 40px;
     }
 }
